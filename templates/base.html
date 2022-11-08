@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	{% block head %}{% endblock %}
+</head>
+<body>
+	<div class="topnav">
+		<a href="{{url_for('home_route') }}">Home</a>
+		<a href="{{url_for('portfolio') }}">Portfolio</a>
+		<a href="{{url_for('contact') }}">Contact</a>
+		<p class="topnavdesc">Personal website - Evgenii Zorin</p>
+	</div>
+	{% block body %}{% endblock %}
+	<div class="container">
+		<h3>Social media</h3>
+		<a href="https://github.com/EvgeniiZorin" class="github" target="_blank"><i class="fa fa-github"></i></a>
+		<a href="https://www.linkedin.com/in/e-zorin/" class="linkedin" target="_blank"><i class="fa fa-linkedin"></i></a>
+		<a href="https://www.freecodecamp.org/evgenii-zorin" class="freecodecamp" target="_blank"><i class="fa fa-free-code-camp"></i></a>
+		<p class="bottom_signature">Made by Evgenii Zorin in Flask</p>
+	</div>
+</body>
+</html>
