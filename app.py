@@ -1,6 +1,8 @@
 from flask import Flask, render_template, url_for, redirect
+# from flaskext.markdown import Markdown
 
 app = Flask(__name__)
+# Markdown(app)
 
 @app.route('/') # Decorator
 @app.route('/home')

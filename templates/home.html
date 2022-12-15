@@ -5,34 +5,36 @@
 {% endblock %}
 
 {% block body %}
-<div class="page">
-	<h1>About Me</h1>
-	<p>I am a Data Scientist and Bioinformatician, interested in
+<div class="container text-bg-light p-3">
+	<h1 class="text-center">About Me</h1>
+	<p class="text-center fs-3 fw-semibold mb-3 mx-5">I am a Data Scientist and Bioinformatician, interested in
 		applying Machine Learning algorithms to solve biological and other kinds of
 		problems.</p>
-	<div class="gallery2">
+	<figure class="mb-4 text-center">
 		<!-- <img src="https://cdn.freecodecamp.org/curriculum/css-photo-gallery/1.jpg" alt="image1"> -->
 		<!-- <img src="https://cdn.freecodecamp.org/curriculum/css-photo-gallery/2.jpg" alt="image2"> -->
 		<!-- <img src="https://cdn.freecodecamp.org/curriculum/css-photo-gallery/3.jpg" alt="image3"> -->
-		<img src="{{url_for('static', filename='image1.jpg')}}" alt="image1">
-	</div>
-	<p>I have finished BSc Nutrition and MSc Biotechnology (Bioinformatics).
-		Afterwards, I decided to dedicate myself to programming and Data Science.
-	</p>
-	<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-		Vestibulum porta eros non erat cursus eleifend. Maecenas vel 
-		iaculis nibh, at semper neque. Etiam bibendum eget sapien sit 
-		amet convallis. Phasellus convallis velit enim, sed ultricies 
-		risus tristique in. Donec sit amet enim massa. Cras dictum enim 
-		feugiat scelerisque vulputate. Donec feugiat pharetra tristique. 
-		Fusce luctus gravida porttitor.</p>
-	<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-		Vestibulum porta eros non erat cursus eleifend. Maecenas vel 
-		iaculis nibh, at semper neque. Etiam bibendum eget sapien sit 
-		amet convallis. Phasellus convallis velit enim, sed ultricies 
-		risus tristique in. Donec sit amet enim massa. Cras dictum enim 
-		feugiat scelerisque vulputate. Donec feugiat pharetra tristique. 
-		Fusce luctus gravida porttitor.</p>
-		<p>&nbsp</p>
+		<img src="{{url_for('static', filename='image1.jpg')}}" alt="image1" class="img-fluid rounded">
+	</figure>
+	<section class="mb-5">
+		<p class="text-body fs-4 fw-normal mx-5">I have finished BSc Nutrition and MSc Biotechnology (Bioinformatics).
+			Afterwards, I decided to dedicate myself to programming and Data Science.
+		</p>
+		<p class="fs-4 mb-4 mx-5">Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+			Vestibulum porta eros non erat cursus eleifend. Maecenas vel 
+			iaculis nibh, at semper neque. Etiam bibendum eget sapien sit 
+			amet convallis. Phasellus convallis velit enim, sed ultricies 
+			risus tristique in. Donec sit amet enim massa. Cras dictum enim 
+			feugiat scelerisque vulputate. Donec feugiat pharetra tristique. 
+			Fusce luctus gravida porttitor.</p>
+		<p class="text-body fs-4  mx-5">Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+			Vestibulum porta eros non erat cursus eleifend. Maecenas vel 
+			iaculis nibh, at semper neque. Etiam bibendum eget sapien sit 
+			amet convallis. Phasellus convallis velit enim, sed ultricies 
+			risus tristique in. Donec sit amet enim massa. Cras dictum enim 
+			feugiat scelerisque vulputate. Donec feugiat pharetra tristique. 
+			Fusce luctus gravida porttitor.</p>
+			<p>&nbsp</p>
+	</section>
 </div>
 {% endblock %}
