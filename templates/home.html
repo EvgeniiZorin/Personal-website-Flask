@@ -7,6 +7,7 @@
 {% block body %}
 <div class="container text-bg-light p-3">
 	<h1 class="text-center">About Me</h1>
+	<br>
 	<p class="text-body fs-4 fw-normal mx-5">My name is Evgenii Zorin. Having recently graduated with an MSc degree in Biotechnology, I 
 		specialise in <b>Data Science</b>, <b>Statistical Programming</b>, and <b>Machine Learning</b>. Additionally, I do various programming tasks in Python.</p>
 	<figure class="mb-4 text-center">
@@ -26,8 +27,12 @@
 				<li><i>Concepts:</i> I have excellent experience of version control with <b>Git and Github</b>; understanding of <b>Data Structures and Algorithms</b></li>
 			</ul>
 		</p>
-		<p class="fs-4 mb-4 mx-5">I am only a beginner in HTML and web development, so this website 
-			still has lots of improvements to be made. Be sure to check out my projects and blog entries in my blog or download my CV.</p>
+		<p class="fs-4 mb-4 mx-5">
+			I am only a beginner in HTML and web development, so this website 
+			still has lots of improvements to be made. Be sure to check out my projects and 
+			blog entries in my blog 
+			or <a href="{{url_for('download_file')}}">download my CV</a>.
+		</p>
 		<p class="text-body fs-4  mx-5">Hope you find my website interesting!</p>
 			<p>&nbsp</p>
 	</section>

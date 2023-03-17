@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<title>Blog entry 1</title>
+{% endblock %}
+
+{% block body %}
+<div class="container text-bg-light p-3">
+	<h1 class="text-center">Blog Entry 1</h1>
+	<br>
+	<p class="text-body fs-4 fw-normal mx-5">
+		<a href="{{ url_for('blog') }}">Return to all blog posts</a>
+	</p>
+	<br>
+	<p class="text-body fs-4 fw-normal mx-5">
+		Blog entry 1 content. 
+	</p>
+	<md-block class="text-body fs-4 fw-normal mx-5">
+		# Heading
+
+		Some *embedded* text with equation \( a =5 \) another.
+
+		$a=5$
+
+		$$ a=5 $$
+		$$ x = \overline{y} $$
+
+		$\cfrac{1}{x+5}$
+
+		Test \( \frac{x}{y}=z^2 \)
+
+	</md-block>
+
+</div>
+{% endblock %}
