@@ -6,28 +6,64 @@
 
 {% block body %}
 <div class="container text-bg-light p-3">
-	<h1 class="text-center">Blog Entry 1</h1>
+	<h1 class="text-center">What is Git and how to use it</h1>
 	<br>
 	<p class="text-body fs-4 fw-normal mx-5">
 		<a href="{{ url_for('blog') }}">Return to all blog posts</a>
 	</p>
-	<br>
-	<p class="text-body fs-4 fw-normal mx-5">
+	<!-- <br> -->
+	<!-- <p class="text-body fs-4 fw-normal mx-5">
 		Blog entry 1 content. 
-	</p>
+	</p> -->
 	<md-block class="text-body fs-4 fw-normal mx-5">
-		# Heading
+		In my journey of learning programming, I have come a long way in how I implement version control in my projects.
+		When I was just starting, my idea of version control was packing the current state of a project in a folder named 
+		with the date and current version, saving it as an archive, and then duplicating the folder to start working on a new
+		version. At that time I was already aware of the existence of Git for version control; I knew also that many of my programmer friends used it 
+		as part of their everyday work. Nevertheless, I never thought much of it, considering it as an over-complicated tool that 
+		I could not trust. Now, I cannot imagine starting and updating any projects without saving all the major changes as versions in 
+		Git and uploading them on Github. In this blog entry, I would like to describe how I use Git for implementing version control in my projects. 
+		
+		# What is Git
+		In short, Git is a type of version control system (VCS) that keeps track of diffferent changes made to your code. In essence, you can run Git in CLI to save states of your programs in different times of editing, just like you can do in a computer game by saving your progress. Git allows the programmer to revert to any state (or version) of the program.
+		
+		*Here are some reasons why Git is an amazing tool*:
+		- Once you learn the most basic commands, it becomes very easy to switch between different versions of your code. In any version, you could change things around and then either save them or revert to the base state without breaking any functionality
+		- I store my programs on Github, and with Git it is very easy to download the current (or a specified) version of any program to my local computer, edit, then push the new version to Github!
+		- Git is supported by many hosting services, such as Pythonanywhere. If I want to host an application or run a task on such a remote server, I can simply clone a repository using Bash console on that server and push my code to that server with ease
 
-		Some *embedded* text with equation \( a =5 \) another.
+		# Basic commands
+		First, Git needs to be installed locally on your PC. In my case, I use Git console from VScode; I installed the terminal from the Extensions tab in VSCode Marketplace. Generally, Git version can be checked with `git --version`, and the current configurations, such as current username and email, with ```git config -l```. 
 
-		$a=5$
+		Generally speaking, the overall pipeline of working with Git is the following: 
+		- `git init` or `git clone [https]`
+		- `git add .`
+		- `git commit -m "commit message"`
+		- `git push`
 
-		$$ a=5 $$
-		$$ x = \overline{y} $$
+		Talking about the specifics of the use of Git, there are a couple of starting points for using Git in your project:
+		1. Starting Git tracking from the local computer and then pushing to Github. 
+		2. Starting the tracking and activity from within Github.
 
-		$\cfrac{1}{x+5}$
+		Let's start with exploring the first option. **I create a project on my local computer, initialize tracking, then create a repository on Github and push my project there**. The main steps are as follows:
+		- Create a repository on my local machine and edit the files to be your first version
+		- Initialise Git tracking from the local machine: `git init`. Changes can be viewed with `git status`
+		- Add changes to staging/tracking: `git add .`
+		- Commit the changes, meaning that the changes will be added as a version to Git system: `git commit -m "message goes here"`
+		- Now the changes have been saved as per the Git system! The commit history can be checked with `git log --oneline`, showing one version per line, or with a tag `-1` to show only the last version. Additionally, differences and alterations can be checked with `git diff`
+		- Create a repository on Github and copy the HTTPS link;
+		- In the local repository, use Git to set the origin of Git as the remote repository on Github: `git remote add origin [https]`
+		- Finally, push the changes to the previously set origin: `git push --set-upstream origin master`
 
-		Test \( \frac{x}{y}=z^2 \)
+		The second option implies that the initial version are already on Github, perhaps because you worked on them before or if you created the files directly on Github. **To clone a repository from Github**, you can use the command `git clone [ssh / https address]`. Cloning is bringing a repository hosted on Github to your local PC. You can use SSH or HTTPS, depending on which one works for you. If you already have a repository from Github, but the one on Github has changes that weren't updated on the local PC, we can update local repo from the latest changes in Github with `git pull`. 
+
+		# Working with branches
+		I rarely use branches in my Git version control. This feature can be useful to create different branches from a chosen version, to perhaps explore different ways to edit the code.
+		- Delete a branch: `git branch -d branchName`
+		- Create a branch: `git branch branchName`
+		- Switch to a different branch: `git checkout branchName`
+		- Create and switch to a new branch: `git checkout -b branchName`
+		- Merge a chosen branch with the working (current) branch: `git merge branchName`
 
 	</md-block>
 
