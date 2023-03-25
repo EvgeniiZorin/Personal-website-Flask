@@ -4,3 +4,14 @@
 	overflow: hidden;
 	height:50vh;
   }
+
+
+
+h1, h2 {
+	color: darkslategray;
+}
+
+p {
+	/* font-family: sans-serif; */
+	/* line-height: 2em; */
+}

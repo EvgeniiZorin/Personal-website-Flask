@@ -5,7 +5,6 @@
 {% endblock %}
 
 {% block body %}
-<div class="container text-bg-light p-3">
 	<h1 class="text-center">Blog</h1>
 	<br>
 	<p class="text-body fs-4 fw-normal mx-3">
@@ -17,5 +16,12 @@
 
 		</ul>
 	</p>
-</div>
+	<p class="text-body fs-4 fw-normal mx-3">
+		Here are some items:
+		<ul class="text-body fs-4 fw-normal mx-3">
+			{% for name in list_example %}
+			<li>{{ name }}</li>
+			{% endfor %}
+		</ul>
+	</p>
 {% endblock %}
